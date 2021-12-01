@@ -102,6 +102,6 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: 'git'
-    repo: https://github.com/fanchangrui/fanchangrui.github.io.git
-    branch: master
+  type: git
+  repo: https://github.com/fanchangrui/fanchangrui.github.io
+
