@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="react-hook-form为何如此受欢迎, 范昌锐的博客">
+    <meta name="keywords" content="预言成功！new必应来了！以及python接入OpenAI API, 范昌锐的博客">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>react-hook-form为何如此受欢迎 | 范昌锐的博客</title>
+    <title>预言成功！new必应来了！以及python接入OpenAI API | 范昌锐的博客</title>
     <link rel="icon" type="image/png" href="/img/avatar.JPG">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -320,12 +320,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">react-hook-form为何如此受欢迎</h1>
+                    <h1 class="description center-align post-title">预言成功！new必应来了！以及python接入OpenAI API</h1>
                 </div>
             </div>
         </div>
@@ -441,12 +441,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/React/">
-                                <span class="chip bg-color">React</span>
+                            <a href="/tags/OpenAI/">
+                                <span class="chip bg-color">OpenAI</span>
                             </a>
                         
-                            <a href="/tags/%E8%A1%A8%E5%8D%95/">
-                                <span class="chip bg-color">表单</span>
+                            <a href="/tags/python/">
+                                <span class="chip bg-color">python</span>
                             </a>
                         
                     </div>
@@ -457,8 +457,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/React/" class="post-category">
-                                React
+                            <a href="/categories/AI/" class="post-category">
+                                AI
                             </a>
                         
                     </div>
@@ -470,28 +470,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-05-31
+                    2023-02-17
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-31
+                    2023-02-17
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    4 分
                 </div>
                 
 
@@ -506,26 +506,21 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>复杂表单在前端领域从来都是一个麻烦的问题，在前端三驾马车中，react由于天然缺少双向绑定的功能，所以在 react 中处理一些复杂的表单一直痛苦满满。<br>有的朋友可能会问，antd用起来不香吗？我为什么还要费劲去熟悉另外一个库呢，而且这个库靠谱吗？毫无疑问antd是非常优秀的react组件库，它内置的Form组件在中后台项目中大规模使用。在 4.x 版本重构后，表单的写法也变得更加简洁。但如工程界一直讲的，在合适的场景使用合适的轮子，我们在下方具体阐述 react-hook-form 的优势以及在哪些场景，它会更香。</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>一图胜千言，两个函数即可实现react表单的数据收集<br><img src="/img/531/demo.png" alt="这是图片" title="Magic Gardens"></p>
-<h3 id="拥抱-ref-与非受控组件"><a href="#拥抱-ref-与非受控组件" class="headerlink" title="拥抱 ref 与非受控组件"></a>拥抱 ref 与非受控组件</h3><p>从这个图中，可以看到用极少量的代码就实现了对非受控表单组件的数据收集。无须在任何时刻都被迫使用受控组件，省去了react中颇为复杂的“双向绑定”。同时，它也支持 HTML 规范里的规则以及自定义校验。由于 react-hook-form 本身的体积非常小（压缩后大约只有 5KB），所以非常适合于轻量的、使用非受控组件的场景使用。<br>同时，react-hook-form 在受控组件中用起来也很方便：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import &#123; useForm, Controller &#125; from &quot;react-hook-form&quot;;</span><br><span class="line">import &#123; Input &#125; from &quot;antd&quot;;</span><br><span class="line"></span><br><span class="line">export default function Form() &#123;</span><br><span class="line">  const &#123; control &#125; &#x3D; useForm(&#123;</span><br><span class="line">    defaultValues: &#123; id: &quot;init&quot; &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line">  return (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;Controller name&#x3D;&#39;id&#39; as&#x3D;&#123;Input&#125; control&#x3D;&#123;control&#125; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>对比antdv3 的getFieldDecorator方案简洁了很多，与antdv4 对比，简洁度上也不分上下。而且由于 react-hook-form 是把组件的值保存在ref中的，因此会在组件内部变化时避免整个视图重绘，这样也会给大型表单项目带来可观的性能收益。在性能敏感的场景，一方面考虑依赖的体积，另一方面考虑交互的流畅，react-hook-form 不失为一个好方案。</p>
-<h3 id="动态增减表单项"><a href="#动态增减表单项" class="headerlink" title="动态增减表单项"></a>动态增减表单项</h3><p>在复杂表单开发中，常会遇到需要动态增减表单项的情况。比如，登记一组用户(users)，而每个 user 都有年龄(age)、名称(name)等属性，在用户填写表单的过程中，这个内容允许编辑、新增、删除、排序。react-hook-form 暴露了另外一个 custom-hooks——useFieldArray专门处理这个问题。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function Test() &#123;</span><br><span class="line">   const &#123; control, register &#125; &#x3D; useForm();</span><br><span class="line">   const &#123; fields, append, prepend, remove, swap, move, insert &#125; &#x3D; useFieldArray(&#123;</span><br><span class="line">      control,</span><br><span class="line">      name: &quot;test&quot;,</span><br><span class="line">   &#125;);</span><br><span class="line"></span><br><span class="line">   return (</span><br><span class="line">      &#123;fields.map((field, index) &#x3D;&gt; (</span><br><span class="line">      &lt;input key&#x3D;&#123;field.id&#125; name&#x3D;&#123;&#96;test[$&#123;index&#125;].value&#96;&#125; ref&#x3D;&#123;register()&#125; &#x2F;&gt;</span><br><span class="line">      ))&#125;</span><br><span class="line">   );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>在 antd 3.x 版本中，需要额外维护一个保存组件 key 的数组，用 key 的增删代替组件的增删，十分繁琐。当然在 4.x 版本重写Form组件后，基本解决了这个问题，API 也与useFieldArray类似了。但是我个人在使用 antd 官方升级工具的过程中还是遇到了很多问题——从 3.x 升级到 4.x，大量的类型定义以及引用的路径都发生了变化。出于这点，基于typescript的 3.x 项目很难升级。所以在使用了 3.x 的老项目（支持 hooks）中，也可以考虑使用 react-hook-form 替换 antd 的Form。</p>
-<h3 id="强大的类型支持"><a href="#强大的类型支持" class="headerlink" title="强大的类型支持"></a>强大的类型支持</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">type Inputs &#x3D; &#123;</span><br><span class="line">  example: string;</span><br><span class="line">  exampleRequired: string;</span><br><span class="line">&#125;;</span><br><span class="line">function App() &#123;</span><br><span class="line">  const &#123; register, handleSubmit, watch, error, getValues &#125; &#x3D; useForm&lt;</span><br><span class="line">    Inputs</span><br><span class="line">  &gt;();</span><br><span class="line"></span><br><span class="line">  const onSubmit: SubmitHandler&lt;Inputs&gt; &#x3D; (data) &#x3D;&gt; &#123;</span><br><span class="line">    alert(JSON.stringify(data));</span><br><span class="line">  &#125;;</span><br><span class="line">  const example &#x3D; watch(&quot;example&quot;); &#x2F;&#x2F; 类型推导为string;</span><br><span class="line">  const values &#x3D; getValues(); &#x2F;&#x2F; 类型推导为Inputs</span><br><span class="line">  return (</span><br><span class="line">    &lt;form onSubmit&#x3D;&#123;handleSubmit(onSubmit)&#125;&gt;</span><br><span class="line">      &lt;label&gt;Example&lt;&#x2F;label&gt;</span><br><span class="line">      &lt;input name&#x3D;&#39;example&#39; defaultValue&#x3D;&#39;test&#39; ref&#x3D;&#123;register&#125; &#x2F;&gt;</span><br><span class="line">      &lt;label&gt;ExampleRequired&lt;&#x2F;label&gt;</span><br><span class="line">      &lt;input</span><br><span class="line">        name&#x3D;&#39;exampleRequired&#39;</span><br><span class="line">        ref&#x3D;&#123;register(&#123; required: true, maxLength: 10 &#125;)&#125;</span><br><span class="line">      &#x2F;&gt;</span><br><span class="line">      &#123;errors.exampleRequired &amp;&amp; &lt;p&gt;This field is required&lt;&#x2F;p&gt;&#125;</span><br><span class="line">      &lt;input type&#x3D;&#39;submit&#39; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;form&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这是非常令我心动的一点，表单对应的类型在整个传递过程中并没有丢失，在获取表单值的函数，如watch,getValues，setValue中还是保持了类型的正确定义。在typescript项目中，避免了更多 any 的出现，可以使你的项目尽可能保持严格的类型定义。这对于大型项目的可维护性来说很有帮助。</p>
-<h3 id="最快速的社区支持，没有之一"><a href="#最快速的社区支持，没有之一" class="headerlink" title="最快速的社区支持，没有之一"></a>最快速的社区支持，没有之一</h3><p>react-hook-form 的社区支持是我迄今为止见过最迅速的。开源项目经过一定版本的迭代达到稳定后，一般作者会更依赖于社区内部的回复，因为作者本人实在是分身乏术了，在 issue 列表里看到几个月甚至几年前未关闭的是家常便饭。所以当第一次看到 react-hook-form 的 issues 列表我都吃惊了，没有超过一周的未关闭的bug或是question。</p>
-<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>如果你正在寻找react的表单方案，react-hook-form 绝对值得一试。它的优势体现在这几个方面：</p>
-<ul>
-<li>足够轻量，5kB的尺寸，以及使用ref保存值的特点，使它在性能敏感的场景有足够的吸引力。</li>
-<li>对非受控组件的场景支持很好。</li>
-<li>为动态变化的表单项提供了 custom-hooks，简洁的API帮助开发者应对复杂的场景。</li>
-<li>强大的类型支持。</li>
-<li>友善的社区和快速的支持。</li>
-</ul>
-<p>同时，它的社区也依然在成长。如果希望能在开源项目中有所贡献/锻炼英语交流能力，它也不失为一个好地方。</p>
+                <p>两个月前我分享了chatgpt的注册和使用后预言了是否能颠覆Google后，没想到刚刚过去60天，微软就推出了整合chatgpt和必应的new必应搜索，这一措施让微软一洗颓势，从今后这条可能最重要的赛道上领先于Google和其他任何公司。本来今天我想聊一下新必应的应用，结果由于申请的候补一直没通过，所以就先分享一下如何在python接入openai的api，今后有很多应用会基于这个进行开发。</p>
+<h2 id="生成api-key"><a href="#生成api-key" class="headerlink" title="生成api key"></a>生成api key</h2><p>首先注册openai就没必要说了，如果没有注册的可以看我12月8号发的文章，这里提醒下现在注册和使用条件变严格了，有些节点或者手机号并不能成功，需要大家多寻找可用的节点和手机号。<br>第一步我们访问<a target="_blank" rel="noopener" href="https://platform.openai.com/account/api-keys">https://platform.openai.com/account/api-keys</a> 这个网站，然后点击create new secret key生成密匙，<br><img src="/img/230217/1.png" alt="这是图片" title="Magic Gardens"><br>这里要注意生成的key下次就看不了，我建议复制保存到电脑上，要不然下次又要重新生成一个key。</p>
+<h2 id="python接入api"><a href="#python接入api" class="headerlink" title="python接入api"></a>python接入api</h2><p>openai官方给了node和python两种方式接入，这里为了演示方便，选择用python来接入，<br>第一步安装openai包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install openai</span><br></pre></td></tr></table></figure>
+
+<h2 id="文本类型"><a href="#文本类型" class="headerlink" title="文本类型"></a>文本类型</h2><p>openai官方有很多模型来训练，我们熟知的chatgpt就是使用gpt3.5模型来训练，我们这里选择三种常见的模型文本、代码和图片来进行演示，这里我们可以用中文和英文来进行询问，但是中文返回结果要进行序列化所以我们暂时使用英文。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import openai</span><br><span class="line">openai.api_key &#x3D; &quot;你的key&quot;</span><br><span class="line">prompt &#x3D;&quot;&quot;&quot;</span><br><span class="line">Does chatgpt belong to openai? Yes or no</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">response &#x3D; openai.Completion.create( model&#x3D;&quot;text-davinci-003&quot;, prompt&#x3D;prompt, max_tokens&#x3D;100, temperature&#x3D;0  )</span><br><span class="line">print(response)</span><br></pre></td></tr></table></figure>
+<p>下面是返回的部分内容：<br><img src="/img/230217/2.png" alt="这是图片" title="Magic Gardens"><br>这里的text就是返回的结果，但是不知道为什么他说chatgpt不属于openai😛<br>这里我解释下发送create的参数：<br>model：使用的模型类别<br>prompt：你要问的问题<br>max_token：完成的最大token数量<br>temperature：回答问题的程度，越接近0越标准，接近于1越开放</p>
+<h2 id="代码类型"><a href="#代码类型" class="headerlink" title="代码类型"></a>代码类型</h2><p>代码类型使用codex模型来查询，这里我们输入问题是用js写一个验证手机号的正则表达式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import openai</span><br><span class="line">openai.api_key &#x3D; &quot;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&quot;</span><br><span class="line">prompt &#x3D;&quot;Write a regular expression in javascript that validates the phone number&quot;</span><br><span class="line">response &#x3D; openai.Completion.create(</span><br><span class="line">  model&#x3D;&quot;code-davinci-002&quot;,</span><br><span class="line">  prompt&#x3D;prompt,</span><br><span class="line">  temperature&#x3D;0,</span><br><span class="line">  max_tokens&#x3D;256,</span><br><span class="line">  top_p&#x3D;1,</span><br><span class="line">  frequency_penalty&#x3D;0,</span><br><span class="line">  presence_penalty&#x3D;0)</span><br><span class="line">print(response)</span><br></pre></td></tr></table></figure>
+<p>下面是返回结果：<br>      “text”: “.\n\nThe phone number should be in the following format:\n\n(123) 456-7890\n\nThe number should start with an opening parenthesis, followed by 3 digits, a closing parenthesis, a space, 3 digits, a hyphen, and 4 digits.\n\nThe phone number can optionally have an extension, which consists of a space, the letter x, and 3 or more digits.\n\nExamples:\n\n(123) 456-7890\n\n(123) 456-7890 x1234\n\n(123) 456-7890 ext1234\n\n(123) 456-7890 ext.1234\n\n*/\n\n// Write your code here\n\nlet phoneNumber = /^\(\d{3}\)\s\d{3}-\d{4}(?:\sx\d{3,})?$/;\n\n// Tests\n\nfor (let str of [&quot;(123) 456-7890&quot;, &quot;(123) 456-7890 x1234&quot;, &quot;(123) 456-7890 ext1234&quot;, &quot;(123) 456-7890 ext.1234&quot;]) {\n  if”</p>
+<h2 id="图片类型"><a href="#图片类型" class="headerlink" title="图片类型"></a>图片类型</h2><p>图片类型我们使用dall-e模型来生成，我输入的内容是一只猫和一条狗互相玩耍的照片，输入限制条件越多越容易得到想要的结果。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import openai</span><br><span class="line">openai.api_key &#x3D; &quot;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&quot;</span><br><span class="line">response &#x3D; openai.Image.create(</span><br><span class="line">  prompt&#x3D;&quot;A cat and a dog play with each other&quot;,</span><br><span class="line">  n&#x3D;1,</span><br><span class="line">  size&#x3D;&quot;1024x1024&quot;</span><br><span class="line">)</span><br><span class="line">image_url &#x3D; response[&#39;data&#39;][0][&#39;url&#39;]</span><br><span class="line">print(image_url)</span><br></pre></td></tr></table></figure>
+<p>下面是我得到的图片：<br><img src="/img/230217/3.png" alt="这是图片" title="Magic Gardens"><br>参数size可以调整你想要图片的大小真是太方便了</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>以上只是openai的api最简单实用方式，如果想要深入了解可以访问官方文档 <a target="_blank" rel="noopener" href="https://platform.openai.com/docs/api-reference/edits">https://platform.openai.com/docs/api-reference/edits</a> 来进行学习，当然别人也不是做慈善的，每个人有一定的免费额度，超过了就要进行付费，当然我们平时学习这点额度肯定也是够的，相信过不了多久国内大厂也会有相关的api开放给我们使用，我的建议是好好学习这方面的知识毕竟很有可能是下一个风口。</p>
 
                 
             </div>
@@ -552,7 +547,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://hexo-fanchangrui.vercel.app/2022/05/31/react-hook-form%E4%B8%BA%E4%BD%95%E5%A6%82%E6%AD%A4%E5%8F%97%E6%AC%A2%E8%BF%8E/">https://hexo-fanchangrui.vercel.app/2022/05/31/react-hook-form%E4%B8%BA%E4%BD%95%E5%A6%82%E6%AD%A4%E5%8F%97%E6%AC%A2%E8%BF%8E/</a>
+                    <a href="https://hexo-fanchangrui.vercel.app/2023/02/17/python%E6%8E%A5%E5%85%A5OpenAI-API/">https://hexo-fanchangrui.vercel.app/2023/02/17/python%E6%8E%A5%E5%85%A5OpenAI-API/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -590,12 +585,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/React/">
-                                    <span class="chip bg-color">React</span>
+                                <a href="/tags/OpenAI/">
+                                    <span class="chip bg-color">OpenAI</span>
                                 </a>
                             
-                                <a href="/tags/%E8%A1%A8%E5%8D%95/">
-                                    <span class="chip bg-color">表单</span>
+                                <a href="/tags/python/">
+                                    <span class="chip bg-color">python</span>
                                 </a>
                             
                         </div>
@@ -639,17 +634,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/06/10/python%E7%88%AC%E8%99%AB%E5%88%9D%E6%8E%A2/">
+                <a href="/2023/02/17/python%E6%8E%A5%E5%85%A5OpenAI-API/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="python爬虫初探">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="预言成功！new必应来了！以及python接入OpenAI API">
                         
-                        <span class="card-title">python爬虫初探</span>
+                        <span class="card-title">预言成功！new必应来了！以及python接入OpenAI API</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -659,30 +655,31 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-06-10
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/python/" class="post-category">
-                                    python
+                            <a href="/categories/AI/" class="post-category">
+                                    AI
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
+                    <a href="/tags/OpenAI/">
+                        <span class="chip bg-color">OpenAI</span>
                     </a>
                     
-                    <a href="/tags/%E7%88%AC%E8%99%AB/">
-                        <span class="chip bg-color">爬虫</span>
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
                     </a>
                     
                 </div>
@@ -696,13 +693,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/05/24/react-antd-table%E5%B1%95%E5%BC%80%E8%A1%8C%E5%AE%9E%E7%8E%B0%E4%BB%A5%E5%8F%8A%E8%87%AA%E5%AE%9A%E4%B9%89%E5%92%8C%E8%B8%A9%E5%9D%91/">
+                <a href="/2023/01/04/%E5%88%A9%E7%94%A8charles%E6%8A%93%E5%8F%96ios%E7%9A%84app%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%8C%85/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="react-antd table展开行实现以及自定义和踩坑">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="利用charles抓取ios的app网络请求包">
                         
-                        <span class="card-title">react-antd table展开行实现以及自定义和踩坑</span>
+                        <span class="card-title">利用charles抓取ios的app网络请求包</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -713,14 +710,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-01-04
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/React/" class="post-category">
-                                    React
+                            <a href="/categories/%E6%8A%93%E5%8C%85/" class="post-category">
+                                    抓包
                                 </a>
                             
                             
@@ -730,12 +727,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/React/">
-                        <span class="chip bg-color">React</span>
+                    <a href="/tags/%E6%8A%93%E5%8C%85/">
+                        <span class="chip bg-color">抓包</span>
                     </a>
                     
-                    <a href="/tags/antd/">
-                        <span class="chip bg-color">antd</span>
+                    <a href="/tags/charles/">
+                        <span class="chip bg-color">charles</span>
                     </a>
                     
                 </div>
