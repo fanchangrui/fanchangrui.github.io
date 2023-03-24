@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>element ui日期选择器获取初始值后无法修改</title>
+      <link href="/2023/03/24/element-ui%E8%8E%B7%E5%8F%96%E5%88%9D%E5%A7%8B%E5%80%BC%E5%90%8E%E6%97%A0%E6%B3%95%E4%BF%AE%E6%94%B9/"/>
+      <url>/2023/03/24/element-ui%E8%8E%B7%E5%8F%96%E5%88%9D%E5%A7%8B%E5%80%BC%E5%90%8E%E6%97%A0%E6%B3%95%E4%BF%AE%E6%94%B9/</url>
+      
+        <content type="html"><![CDATA[<p>最近在element-ui的日期选择器中，获取初始日期的开始时间和结束时间后，无法修改时间、删除等操作，代码如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-form-item</span><br><span class="line">            label&#x3D;&quot;活动时间：&quot;</span><br><span class="line">            prop&#x3D;&quot;dateRange&quot;</span><br><span class="line">            &gt;</span><br><span class="line">            &lt;el-date-picker</span><br><span class="line">                :disabled&#x3D;&quot;isDetail&quot;</span><br><span class="line">                v-model&#x3D;&quot;form.dateRange&quot;</span><br><span class="line">                size&#x3D;&quot;small&quot;</span><br><span class="line">                format&#x3D;&quot;yyyy-MM-dd HH:mm:ss&quot;</span><br><span class="line">                value-format&#x3D;&quot;yyyy-MM-dd HH:mm:ss&quot;</span><br><span class="line">                type&#x3D;&quot;datetimerange&quot;</span><br><span class="line">                start-placeholder&#x3D;&quot;创建开始日期&quot;</span><br><span class="line">                end-placeholder&#x3D;&quot;创建结束日期&quot;</span><br><span class="line">            &gt;&lt;&#x2F;el-date-picker&gt;</span><br><span class="line">        &lt;&#x2F;el-form-item&gt;   </span><br><span class="line"></span><br><span class="line">          if (this.$route.query.id ||  this.$route.query.detailId) &#123;</span><br><span class="line">            getDetail(&#123; id: this.$route.query.id || this.$route.query.detailId &#125;)</span><br><span class="line">            .then(res &#x3D;&gt; &#123;</span><br><span class="line">                this.form &#x3D; res.data;</span><br><span class="line">                this.form.dateRange[0] &#x3D; res.data.startTime</span><br><span class="line">                this.form.dateRange[1] &#x3D; res.data.endTime</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            &#125;)</span><br><span class="line">            .catch(() &#x3D;&gt; &#123;&#125;);</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure><p>然后我尝试change事件打印了dateRange的值，已经显示修改了，但是视图却一直不更新，我怀疑是这个对象失去了响应式，我想到是否可以手动给这个变量加响应式，代码如下：  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">if (this.$route.query.id ||  this.$route.query.detailId) &#123;</span><br><span class="line">               getDetail(&#123; id: this.$route.query.id || this.$route.query.detailId &#125;)</span><br><span class="line">               .then(res &#x3D;&gt; &#123;</span><br><span class="line">                   this.form &#x3D; res.data;</span><br><span class="line">                   this.$set(this.form, &#39;dateRange&#39;, [res.data.startTime, res.data.endTime])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">               &#125;)</span><br><span class="line">               .catch(() &#x3D;&gt; &#123;&#125;);</span><br><span class="line">           &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>然后这个bug就解决了，为什么会出现这个bug呢，我怀疑是vue的data数据里如果是一个二级对象是Object或者Array的话，他下一级的数据会失去响应式，需要用$set手动给这个变量加上响应式，或者把这个变量定义在data的第一层。<br>实际上这些bug无法解决很多都是对于Vue原理不够了解导致的，我们可以平时多看看源码了解下Vue响应式原理就可以在出现bug的时候迅速定位了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Vue </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Vue </tag>
+            
+            <tag> element </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>预言成功！new必应来了！以及python接入OpenAI API</title>
       <link href="/2023/02/17/python%E6%8E%A5%E5%85%A5OpenAI-API/"/>
       <url>/2023/02/17/python%E6%8E%A5%E5%85%A5OpenAI-API/</url>
