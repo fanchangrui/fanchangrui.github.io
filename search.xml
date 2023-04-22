@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>部署一个属于自己的AgentGPT</title>
+      <link href="/2023/04/22/%E9%83%A8%E7%BD%B2%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84AgentGPT/"/>
+      <url>/2023/04/22/%E9%83%A8%E7%BD%B2%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84AgentGPT/</url>
+      
+        <content type="html"><![CDATA[<p>前段时间Reworkd团队开源了AgentGPT，在github上迅速火爆起来，截止目前已经获得了16k的star，我研究了下这是一个基于ChatGPT能给定一个目标自主训练的AI项目，他的功能如下：</p><ul><li>通过向量 DB 的长期记忆</li><li>通过 LangChain 的网页浏览功能</li><li>与网站和人的互动</li><li>通过文档 API 编写功能</li><li>节省代理运行</li><li>用户和身份验证</li><li>下限付费版本的 Stripe 集成</li></ul><p>我们可以把这个项目部署在自己的电脑或服务器上，AgentGPT 允许您配置和部署自治 AI 代理。为您自己的自定义 AI 命名，让它开始任何可以想象的目标。它将尝试通过思考要完成的任务、执行任务并从结果中学习来实现目标。</p><h2 id="安装AgentGPT"><a href="#安装AgentGPT" class="headerlink" title="安装AgentGPT"></a>安装AgentGPT</h2><p>AgentGPT所用到的前端技术大概包括了Next.js,TailWindCSS和create-t3-app来快速创建Next应用。<br>这个项目有多种部署方式可以利用docker开始启动，我们今天来进行手动部署并修改一些创建自己的AgentGPT。</p><p>1、首先需要安装node18+的环境，可以在nvm中配置下；<br>2、克隆仓库输入以下命令：<br>  git clone <a href="https://github.com/reworkd/AgentGPT.git">https://github.com/reworkd/AgentGPT.git</a><br>3、安装依赖项：<br>  npm install<br>4、创建一个包含以下内容的.env文件并修改自己的内容：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># Deployment Environment:</span><br><span class="line">NODE_ENV&#x3D;development</span><br><span class="line"></span><br><span class="line"># Next Auth config:</span><br><span class="line"># Generate a secret with &#96;openssl rand -base64 32&#96;</span><br><span class="line"># mac用系统自带的openssl命令生成随机字符，windows不清楚系统是否支持</span><br><span class="line">NEXTAUTH_SECRET&#x3D;changeme</span><br><span class="line">NEXTAUTH_URL&#x3D;http:&#x2F;&#x2F;localhost:3000</span><br><span class="line"># 输入自己的数据库配置，我这里使用的mysql</span><br><span class="line">DATABASE_URL&#x3D;mysql:&#x2F;&#x2F;root:密码@localhost:3306&#x2F;prisma</span><br><span class="line"></span><br><span class="line"># Your open api key</span><br><span class="line"># 输入你自己的openai的key</span><br><span class="line">OPENAI_API_KEY&#x3D;changeme</span><br></pre></td></tr></table></figure><p>5、运行项目：<br>npx prisma db push<br>npm run dev</p><p>现在你可以看到本地3000端口启动一个AgentGPT项目了。</p><h2 id="修改代码和使用"><a href="#修改代码和使用" class="headerlink" title="修改代码和使用"></a>修改代码和使用</h2><p>在settings添加自己的key选择gpt-3.5或者gpt-4模型进行提问。<br><img src="/img/230422/1.png" alt="这是图片" title="Magic Gardens"> </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> AI </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> AI </tag>
+            
+            <tag> AgentGPT </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>element ui日期选择器获取初始值后无法修改</title>
       <link href="/2023/03/24/element-ui%E8%8E%B7%E5%8F%96%E5%88%9D%E5%A7%8B%E5%80%BC%E5%90%8E%E6%97%A0%E6%B3%95%E4%BF%AE%E6%94%B9/"/>
       <url>/2023/03/24/element-ui%E8%8E%B7%E5%8F%96%E5%88%9D%E5%A7%8B%E5%80%BC%E5%90%8E%E6%97%A0%E6%B3%95%E4%BF%AE%E6%94%B9/</url>
